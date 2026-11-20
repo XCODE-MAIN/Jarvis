@@ -1,0 +1,59 @@
+{
+  "name": "jarvis",
+  "version": "0.1.0",
+  "description": "Assistente de IA open source que controla o PC por texto ou voz",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8"
+  },
+  "license": "MIT",
+  "build": {
+    "appId": "dev.xcode.jarvis",
+    "productName": "Jarvis",
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer/**",
+      "build/icon.png"
+    ],
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "build/icon.ico"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Utility"
+    }
+  },
+  "author": "Xavier Pereira",
+  "homepage": "https://github.com/xpereira7/jarvis#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xpereira7/jarvis.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xpereira7/jarvis/issues"
+  },
+  "keywords": [
+    "jarvis",
+    "ai-assistant",
+    "voice-assistant",
+    "electron",
+    "groq",
+    "desktop",
+    "open-source"
+  ],
+  "engines": {
+    "node": ">=18"
+  }
+}
